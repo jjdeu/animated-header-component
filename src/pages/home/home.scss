@@ -1,3 +1,21 @@
 page-home {
 
+  .scroll-content {
+    // How far down does the content begin
+    padding-top: 22vh !important;
+    // Needs to be transparent so we see the fixed-content image-background
+    background-color: transparent;
+  }
+
+  ion-navbar#second-header {
+    .toolbar-background {
+      opacity: 0;
+    }
+    .toolbar-title {
+      font-size: 3rem !important;
+      text-align: center !important;
+      color: color($colors, primary-color-text);
+    }
+  }
+
 }

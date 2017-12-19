@@ -1,15 +1,14 @@
 {
   "name": "animated-header-component",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "JJ",
   "homepage": "http://ionicframework.com/",
-  "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve --lab"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -34,5 +33,5 @@
     "@ionic/app-scripts": "3.1.5",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project"
+  "description": "Animated header for pages in ionic 2"
 }

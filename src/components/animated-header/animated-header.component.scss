@@ -1,0 +1,95 @@
+$animationSpeed: 400ms;
+$opacitySpeed: 300ms;
+
+animated-header {
+
+  ion-header {
+    opacity: 0;
+
+    -webkit-transition: opacity $opacitySpeed ease-in-out;
+    -ms-transition: opacity $opacitySpeed ease-in-out;
+    -moz-transition: opacity $opacitySpeed ease-in-out;
+    transition: opacity $opacitySpeed ease-in-out;
+
+    .toolbar {
+      padding-top: 11px !important;
+    }
+  }
+  ion-header.visible {
+    opacity: 1;
+  }
+
+  ion-header ion-title {
+    opacity: 0;
+
+    -webkit-transition: all $animationSpeed ease-in-out;
+    -webkit-transform: translate(40px, 15px) !important;
+    -ms-transition: all $animationSpeed ease-in-out;
+    -ms-transform: translate(40px, 15px);
+    -moz-transition: all $animationSpeed ease-in-out;
+    -moz-transform: translate(40px, 15px);
+    transition: all $animationSpeed ease-in-out;
+    transform: translate(40px, 15px);
+
+  }
+  ion-header ion-title.animate {
+    opacity: 1;
+
+    -webkit-transform: translate(40px, 0px) !important;
+    -ms-transform: translate(40px, 0px);
+    -moz-transform: translate(40px, 0px);
+    transform: translate(40px, 0px);
+
+  }
+
+  // Some iOS overrides
+  .toolbar-ios {
+    min-height: 56px;
+
+    ion-title {
+      padding-left: 10px !important;
+    }
+
+    .toolbar-title-ios {
+      text-align: left;
+    }
+  }
+  #fixed-menu-button {
+    .button-ios {
+      margin-top: -0.6rem;
+    }
+  }
+
+  #fixed-menu-button {
+    top: 10px;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 255, 0);
+    > button {
+      background-color: rgba(0, 0, 255, 0) !important;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+    ion-icon {
+      color: color($colors, primary-color-text) !important;
+    }
+  }
+  #fixed-menu-button.visible {
+    ion-icon {
+      color: inherit !important;
+    }
+  }
+
+
+
+  ion-content {
+    .fixed-content {
+      margin-top: 0 !important;
+      background: color($colors, item-background-color) url('../assets/imgs/advance-card-alaska.jpg') no-repeat;
+      background-size: auto;
+      background-position: right;
+    }
+  }
+
+
+}

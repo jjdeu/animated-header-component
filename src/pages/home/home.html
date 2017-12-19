@@ -1,18 +1,42 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+<animated-header [opacityFactor]="2">
+
+  <ion-header #ionHeader>
+
+    <ion-navbar color="primary">
+      <ion-title>
+        {{ title }}
+      </ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+  <div id="fixed-menu-button" #fixedMenuButton>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu' color="primary-color-text"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+  </div>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-content fullscreen #ionContent>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-navbar color="primary" id="second-header" #secondHeader>
+      <ion-title>
+        {{ title }}
+      </ion-title>
+    </ion-navbar>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+    <ion-list>
+
+      <ion-item *ngFor="let conversation of conversations">
+        <ion-avatar item-start>
+          <img [src]="conversation['image']">
+        </ion-avatar>
+        <h2>{{ conversation['name'] }}</h2>
+        <h3>{{ conversation['title'] }}</h3>
+        <p>{{ conversation['description'] }}</p>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+
+</animated-header>
